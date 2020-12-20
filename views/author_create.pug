@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Create new author
+
+  form(action)
+
+  <form action="/catalog/author/create" method="post">
+    div(class="row")
+      div(clas="col-sm-4")
+        <label for="first_name">Enter first name: </label>
+      div(clas="col-sm-8")
+        <input id="first_name" type="text" name="name_field" placeholder="Default name for author.">
+    <input type="submit" value="OK">
+  </form>

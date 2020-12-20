@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= book.title
+
+  div(class="row")
+    div(clas="col-sm-3")
+      b Summary
+    div(clas="col-sm-9")
+      if(book.summary)
+        p= book.summary
+      else 
+        p Nothing!
+  div(class="row")
+    div(clas="col-sm-3")
+      b ISBN
+    div(clas="col-sm-9")
+      p= book.isbn
+  div(class="row")
+    div(clas="col-sm-3")
+      b Author
+    div(clas="col-sm-9")
+      p= book.author.name
+  div(class="row")
+    div(clas="col-sm-3")
+      b Genre
+    div(clas="col-sm-9")
+      each genre in book.genre
+        p= genre.name
